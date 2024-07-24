@@ -1,3 +1,5 @@
+# Esp32C3-BLE-Mouse-Keyboard
+
 Recommanded: get to /C3HID and use the arduino version.
 
 For some reason the platformIO version doesn't work for esp32c3 super mini.
