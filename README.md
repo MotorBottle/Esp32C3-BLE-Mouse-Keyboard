@@ -1,7 +1,7 @@
 # Esp32C3-BLE-Mouse-Keyboard
 
-Recommanded: get to /C3HID and use the arduino version.
+Get to /C3HID to use the arduino version.
 
-For some reason the platformIO version doesn't work for esp32c3 super mini.
+For some reason the platformIO version is tested working for Hezhou's Air M2M Esp32C3 but somehow doesn't work for esp32c3 super mini.
 
-Arduino version tested working perfectly.
+For some reason the Arduino version is tested working for Esp32c3 super mini but somehow doesn't work for Hezhou's Air M2M Esp32C3.
