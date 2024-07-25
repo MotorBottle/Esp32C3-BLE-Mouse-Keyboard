@@ -71,7 +71,7 @@ void setup() {
     Serial.begin(115200);
     Serial.println("Starting BLE work!");
 
-    NimBLEDevice::init("ESP32 Keyboard & Mouse");
+    NimBLEDevice::init("ESP32 K&M");
     NimBLEServer* pServer = NimBLEDevice::createServer();
 
     hid = new NimBLEHIDDevice(pServer);
@@ -101,14 +101,14 @@ void loop() {
             Serial.readBytes(buffer, 4);
 
             // Print received data for debugging
-            Serial.print("Received mouse data: ");
-            Serial.print(identifier, HEX);
-            Serial.print(" ");
-            for (int i = 0; i < 4; i++) {
-                Serial.print(buffer[i], HEX);
-                Serial.print(" ");
-            }
-            Serial.println();
+            // Serial.print("Received mouse data: ");
+            // Serial.print(identifier, HEX);
+            // Serial.print(" ");
+            // for (int i = 0; i < 4; i++) {
+            //     Serial.print(buffer[i], HEX);
+            //     Serial.print(" ");
+            // }
+            // Serial.println();
 
             int8_t mouseMoveX = buffer[1];
             int8_t mouseMoveY = buffer[2];
@@ -124,14 +124,14 @@ void loop() {
             Serial.readBytes(buffer, 7);
 
             // Print received data for debugging
-            Serial.print("Received keyboard data: ");
-            Serial.print(identifier, HEX);
-            Serial.print(" ");
-            for (int i = 0; i < 7; i++) {
-                Serial.print(buffer[i], HEX);
-                Serial.print(" ");
-            }
-            Serial.println();
+            // Serial.print("Received keyboard data: ");
+            // Serial.print(identifier, HEX);
+            // Serial.print(" ");
+            // for (int i = 0; i < 7; i++) {
+            //     Serial.print(buffer[i], HEX);
+            //     Serial.print(" ");
+            // }
+            // Serial.println();
 
             uint8_t modifiers = buffer[0];
             uint8_t keys[6] = { buffer[1], buffer[2], buffer[3], buffer[4], buffer[5], buffer[6] };
