@@ -70,7 +70,7 @@ void setup() {
     Serial.begin(115200);
     Serial.println("Starting BLE work!");
 
-    NimBLEDevice::init("ESP32 Keyboard & Mouse");
+    NimBLEDevice::init("ESP32C3 Supermini MK");
     NimBLEServer* pServer = NimBLEDevice::createServer();
 
     hid = new NimBLEHIDDevice(pServer);
